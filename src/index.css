@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Noto Sans SC", sans-serif;
+  
+  --color-primary: #005344;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #006d5b;
+  --color-on-primary-container: #96ebd5;
+  
+  --color-secondary: #46645c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #c8eade;
+  --color-on-secondary-container: #4c6a62;
+  
+  --color-tertiary: #763527;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #934c3c;
+  --color-on-tertiary-container: #ffd1c7;
+  
+  --color-background: #f7faf7;
+  --color-on-background: #181c1b;
+  
+  --color-surface: #f7faf7;
+  --color-on-surface: #181c1b;
+  --color-surface-variant: #e0e3e0;
+  --color-on-surface-variant: #3e4945;
+  
+  --color-outline: #6e7975;
+  --color-outline-variant: #bec9c4;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f4f1;
+  --color-surface-container: #ebefec;
+  --color-surface-container-high: #e5e9e6;
+  --color-surface-container-highest: #e0e3e0;
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-outline-variant/20;
+  }
+  body {
+    @apply bg-background text-on-background font-sans antialiased;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border-none;
+}
